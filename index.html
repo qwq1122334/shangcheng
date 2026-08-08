@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>渭南师范学院 · 新生被褥预定平台</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <!-- 顶部滚动公告栏 -->
+    <div class="announcement-bar" id="announcementBar">
+        <i class="fas fa-bullhorn announcement-icon"></i>
+        <div class="announcement-text-wrap">
+            <div class="announcement-text" id="announcementText"></div>
+        </div>
+    </div>
+
+    <!-- 顶部导航 -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="site-logo">
+                <i class="fas fa-bed logo-icon"></i>
+                <span class="logo-text">渭师·新生被褥预定</span>
+            </a>
+            <div class="header-actions">
+                <a href="detail.html" class="header-btn header-btn-outline">
+                    <i class="fas fa-list"></i> 全部款式
+                </a>
+                <a id="queryEntryLink" href="#" class="header-btn header-btn-primary" target="_blank" rel="noopener">
+                    <i class="fas fa-search"></i> 我的订单
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主体：单商品展示 -->
+    <main class="site-main">
+        <div class="container">
+
+            <!-- 商品主卡片 -->
+            <section class="home-product-card">
+                <div class="home-product-media">
+                    <a href="detail.html">
+                        <img id="homeCoverImg" src="img/products/典雅绿.jpg" alt="新生被褥四件套">
+                    </a>
+                    <div class="home-product-badge">
+                        <i class="fas fa-gift"></i> 2026 新生专享
+                    </div>
+                </div>
+
+                <div class="home-product-info">
+                    <h1 class="home-product-title" id="homeProductTitle">渭南师范学院新生被褥四件套</h1>
+                    <p class="home-product-desc" id="homeProductDesc">厂家直供，100%纯棉面料，舒适透气，专为2026级新生定制</p>
+
+                    <div class="home-pricing-row">
+                        <div class="home-price-block">
+                            <span class="home-price-label">团购价 (≥2套)</span>
+                            <span class="home-price home-price-group"><i class="fas fa-yen-sign"></i><b id="homeGroupPrice">399</b>/套</span>
+                        </div>
+                        <div class="home-price-block">
+                            <span class="home-price-label">单套价</span>
+                            <span class="home-price home-price-single"><i class="fas fa-yen-sign"></i><b id="homeSinglePrice">450</b>/套</span>
+                        </div>
+                        <div class="home-stats-block">
+                            <span class="home-sold">已售 <b id="homeSold">87</b> 件</span>
+                            <span class="home-stock">库存 <b id="homeStock">200</b> 件</span>
+                        </div>
+                    </div>
+
+                    <div class="home-tags-row">
+                        <span class="home-tag"><i class="fas fa-truck"></i> 送至宿舍 无需自提</span>
+                        <span class="home-tag"><i class="fas fa-calendar-alt"></i> 8月30日统一进货</span>
+                        <span class="home-tag"><i class="fas fa-user-graduate"></i> 2026新生专享</span>
+                    </div>
+
+                    <div class="home-ctas">
+                        <a href="detail.html" class="home-btn home-btn-primary home-btn-big">
+                            <i class="fas fa-shopping-bag"></i> 立即预定 · 查看全部款式
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 款式快速预览 -->
+            <section class="home-skus-section">
+                <h2 class="section-subtitle"><i class="fas fa-palette"></i> 全部款式预览 <span class="subtitle-hint">（共 <b id="homeSkuCount">7</b> 款）</span></h2>
+                <div class="home-skus-grid" id="homeSkuGrid">
+                    <!-- JS 动态渲染 -->
+                </div>
+                <div class="home-skus-footer">
+                    <a href="detail.html" class="home-btn home-btn-outline">
+                        <i class="fas fa-arrow-right"></i> 进入详情页选规格 &rarr;
+                    </a>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-info-row">
+                <div class="footer-info-item">
+                    <i class="fas fa-phone"></i> 客服电话：<span id="footerPhone">—</span>
+                </div>
+                <div class="footer-info-item">
+                    <i class="fab fa-weixin"></i> 客服微信：<span id="footerWechat">—</span>
+                </div>
+                <div class="footer-info-item">
+                    <i class="fas fa-map-marker-alt"></i> 渭南师范学院 2026 级新生专享
+                </div>
+            </div>
+            <div class="footer-copyright">
+                © 2026 渭南师范学院校园墙 · 新生被褥预定平台 · 仅内部使用
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/common.js"></script>
+    <script>
+        // 首页初始化：读取 products.json 渲染
+        document.addEventListener('DOMContentLoaded', function() {
+            WNU.initHomePage();
+        });
+    </script>
+</body>
+</html>

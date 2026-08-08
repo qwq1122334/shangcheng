@@ -1,0 +1,127 @@
+{
+  "product": {
+    "name": "渭南师范学院新生被褥四件套",
+    "shortName": "新生被褥四件套",
+    "description": "厂家直供，100%纯棉面料，舒适透气，专为2026级新生定制。8月30日统一进货，9月开学送至宿舍。",
+
+    "pricing": {
+      "singlePrice": 450,
+      "groupPrice": 399,
+      "groupThreshold": 2,
+      "unit": "元/套"
+    },
+
+    "maxQuantity": 5,
+    "sold": 87,
+    "stock": 200,
+
+    "announcement": [
+      "🎓 渭南师范学院 2026 级新生被褥预定 · 厂家直供品质保证",
+      "⏰ 预定截止 8 月 30 日 · 统一进货售完即止",
+      "📦 9 月开学送至宿舍 · 无需自提",
+      "🏷 2 套及以上享团购价 399 元/套 · 单套 450 元"
+    ],
+
+    "videos": [
+      {
+        "type": "bilibili",
+        "url": "https://www.bilibili.com/video/placeholder1",
+        "cover": "img/products/典雅绿.jpg",
+        "title": "面料实拍展示"
+      },
+      {
+        "type": "tencent",
+        "url": "https://v.qq.com/x/page/placeholder2.html",
+        "cover": "img/products/芬利来灰.jpg",
+        "title": "拆箱及细节展示"
+      },
+      {
+        "type": "bilibili",
+        "url": "https://www.bilibili.com/video/placeholder3",
+        "cover": "img/products/光的邂逅.jpg",
+        "title": "宿舍铺好效果实拍"
+      }
+    ],
+
+    "params": {
+      "面料/填充物": "100%纯棉面料 + 羽丝棉填充（被芯2.5kg）",
+      "尺寸规格": "床单1.5m×2.0m / 被套200×230cm / 枕套48×74cm ×2",
+      "重量/克重": "整套约4.2kg，面料克重120g/㎡",
+      "洗涤/季节": "四季通用，可机洗，建议水温≤40℃，不可漂白"
+    },
+
+    "contact": {
+      "wechat": "wn_bedding2026",
+      "phone": "13800000000"
+    },
+
+    "payment": {
+      "qrcode": "img/payment/微信收款二维码.jpg",
+      "tip": "微信扫码付款时，请备注您的手机号，便于核对"
+    },
+
+    "forms": {
+      "orderForm": "https://jsjform.com/f/mZx0X0",
+      "queryView": "https://jsjform.com/f/mZx0X0"
+    },
+
+    "skus": [
+      {
+        "id": "sku001",
+        "name": "典雅绿",
+        "cover": "img/products/典雅绿.jpg",
+        "images": [
+          "img/products/典雅绿.jpg"
+        ]
+      },
+      {
+        "id": "sku002",
+        "name": "芬利来灰",
+        "cover": "img/products/芬利来灰.jpg",
+        "images": [
+          "img/products/芬利来灰.jpg"
+        ]
+      },
+      {
+        "id": "sku003",
+        "name": "光的邂逅",
+        "cover": "img/products/光的邂逅.jpg",
+        "images": [
+          "img/products/光的邂逅.jpg"
+        ]
+      },
+      {
+        "id": "sku004",
+        "name": "星际空间",
+        "cover": "img/products/星际空间.jpg",
+        "images": [
+          "img/products/星际空间.jpg"
+        ]
+      },
+      {
+        "id": "sku005",
+        "name": "乔南",
+        "cover": "img/products/乔南.jpg",
+        "images": [
+          "img/products/乔南.jpg"
+        ]
+      },
+      {
+        "id": "sku006",
+        "name": "简昔",
+        "cover": "img/products/简昔.jpg",
+        "images": [
+          "img/products/简昔.jpg"
+        ]
+      },
+      {
+        "id": "sku007",
+        "name": "时尚拼图",
+        "cover": "img/products/时尚拼图.jpg",
+        "images": [
+          "img/products/时尚拼图.jpg"
+        ]
+      }
+    ]
+  }
+}

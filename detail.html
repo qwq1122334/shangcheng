@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新生被褥四件套 · 选款下单</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body class="page-detail">
+    <!-- 顶部滚动公告栏 -->
+    <div class="announcement-bar" id="announcementBar">
+        <i class="fas fa-bullhorn announcement-icon"></i>
+        <div class="announcement-text-wrap">
+            <div class="announcement-text" id="announcementText"></div>
+        </div>
+    </div>
+
+    <!-- 顶部导航 -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="site-logo">
+                <i class="fas fa-bed logo-icon"></i>
+                <span class="logo-text">渭师·新生被褥预定</span>
+            </a>
+            <div class="header-actions">
+                <a href="index.html" class="header-btn header-btn-outline">
+                    <i class="fas fa-home"></i> 首页
+                </a>
+                <a id="queryEntryLink" href="#" class="header-btn header-btn-primary" target="_blank" rel="noopener">
+                    <i class="fas fa-search"></i> 我的订单
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 商品详情主体 -->
+    <main class="detail-main">
+        <div class="container">
+
+            <!-- 商品主区块：媒体 + 信息 -->
+            <section class="detail-top">
+
+                <!-- 左侧/上方：主图轮播（含3个统一视频混排） -->
+                <div class="detail-media">
+                    <div class="detail-main-visual" id="mainVisual">
+                        <img id="mainVisualImg" src="img/products/典雅绿.jpg" alt="商品主图">
+                        <video id="mainVisualVideo" class="visual-video" style="display:none;" controls preload="metadata" playsinline></video>
+                        <div id="videoPlayMask" class="video-play-mask" style="display:none;">
+                            <i class="fas fa-play-circle"></i>
+                        </div>
+                    </div>
+
+                    <!-- 小缩略图（含规格图+视频） -->
+                    <div class="detail-thumbs-row" id="thumbsRow">
+                        <!-- JS 渲染：规格图片 + 3 个视频混排 -->
+                    </div>
+                </div>
+
+                <!-- 右侧/下方：信息区 -->
+                <div class="detail-info">
+                    <h1 class="detail-title" id="detailTitle">渭南师范学院新生被褥四件套</h1>
+                    <p class="detail-desc" id="detailDesc">厂家直供，100%纯棉面料，舒适透气</p>
+
+                    <!-- 价格/已售/库存 -->
+                    <div class="detail-price-card">
+                        <div class="detail-price-row">
+                            <span class="detail-price-label">单价</span>
+                            <span class="detail-price-cur">
+                                <i class="fas fa-yen-sign"></i>
+                                <b id="detailUnitPrice">450</b>
+                                <span class="detail-unit">/套</span>
+                            </span>
+                            <span class="detail-price-hint" id="detailPriceHint">买 2 套起，享团购价 399 元/套</span>
+                        </div>
+                        <div class="detail-meta-row">
+                            <div class="detail-meta-item">
+                                已售 <b id="detailSold">87</b> 件
+                            </div>
+                            <div class="detail-meta-item">
+                                库存 <b id="detailStock">200</b> 件
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 当前选中款式名 -->
+                    <div class="detail-sku-selected">
+                        <span class="sku-selected-label">已选款式：</span>
+                        <span class="sku-selected-name" id="selectedSkuName">典雅绿</span>
+                    </div>
+
+                    <!-- 规格缩略图区（折叠展开） -->
+                    <div class="detail-sku-picker">
+                        <div class="sku-picker-title">
+                            款式 <span class="sku-picker-count">（共 <b id="skuPickerCount">7</b> 款）</span>
+                        </div>
+
+                        <div class="sku-picker-grid" id="skuPickerGrid">
+                            <!-- JS 渲染：20-30 款图片缩略图 -->
+                        </div>
+
+                        <div class="sku-picker-expand-row">
+                            <button type="button" id="skuExpandBtn" class="sku-expand-btn">
+                                <i class="fas fa-chevron-down"></i>
+                                <span>查看全部款式</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- 数量选择器（阶梯定价） -->
+                    <div class="detail-qty-row">
+                        <div class="qty-label">数量</div>
+                        <div class="qty-selector">
+                            <button type="button" id="qtyMinus" class="qty-btn qty-btn-minus">
+                                <i class="fas fa-minus"></i>
+                            </button>
+                            <input type="number" id="qtyInput" value="1" min="1" max="5" readonly>
+                            <button type="button" id="qtyPlus" class="qty-btn qty-btn-plus">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                            <span class="qty-max-tip">限购 5 件</span>
+                        </div>
+                    </div>
+
+                    <!-- 总价 -->
+                    <div class="detail-total-row">
+                        <span class="total-label">合计</span>
+                        <span class="total-price">
+                            <i class="fas fa-yen-sign"></i><b id="detailTotal">450</b>
+                        </span>
+                        <span class="total-save" id="totalSaveTip" style="display:none;">
+                            已省 <i class="fas fa-yen-sign"></i><b id="detailSaved">0</b>
+                        </span>
+                    </div>
+
+                    <!-- 客服联系（按字段显示） -->
+                    <div class="detail-contact" id="detailContact" style="display:none;">
+                        <div class="contact-title"><i class="fas fa-headset"></i> 咨询客服</div>
+                        <div class="contact-items" id="contactItems">
+                            <!-- JS 按 JSON 字段显示 -->
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- 商品参数表 -->
+            <section class="detail-params">
+                <h2 class="block-title"><i class="fas fa-list-ol"></i> 商品参数</h2>
+                <table class="params-table" id="paramsTable">
+                    <tbody>
+                        <!-- JS 渲染 4 行参数 -->
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- 微信收款二维码提示 -->
+            <section class="detail-payment-info">
+                <h2 class="block-title"><i class="fab fa-weixin"></i> 微信付款说明</h2>
+                <div class="payment-card">
+                    <div class="payment-qrcode-box">
+                        <img id="paymentQrcodeImg" src="img/payment/微信收款二维码.jpg" alt="微信收款二维码">
+                    </div>
+                    <div class="payment-texts">
+                        <p class="payment-tip-title">预定流程（请按顺序操作）</p>
+                        <ol class="payment-steps">
+                            <li>
+                                <b>①</b>
+                                <span>选好款式和数量，点击下方“立即预定”按钮</span>
+                            </li>
+                            <li>
+                                <b>②</b>
+                                <span>页面将跳转金数据表单，请填写手机号 + 姓名 + 宿舍楼号 + 房间号</span>
+                            </li>
+                            <li>
+                                <b>③</b>
+                                <span>微信扫描左侧二维码付款时，请在备注里填写您的手机号</span>
+                            </li>
+                            <li>
+                                <b>④</b>
+                                <span>在表单里上传付款截图，提交表单</span>
+                            </li>
+                            <li>
+                                <b>⑤</b>
+                                <span>老板会审核订单，点击顶部“我的订单”输入手机号可随时查询状态</span>
+                            </li>
+                        </ol>
+                        <p class="payment-tip-sub" id="paymentTipSub">
+                            微信扫码付款时，请备注您的手机号，便于核对
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- 底部固定栏（总价 + 立即预定） -->
+    <div class="bottom-bar">
+        <div class="container bottom-bar-inner">
+            <div class="bottom-bar-price">
+                <span class="bottom-label">合计</span>
+                <span class="bottom-total"><i class="fas fa-yen-sign"></i><b id="bottomTotal">450</b></span>
+                <span class="bottom-unit">x<span id="bottomQty">1</span> 件</span>
+            </div>
+            <button type="button" id="bookNowBtn" class="bottom-book-btn">
+                <i class="fas fa-shopping-bag"></i> 立即预定
+            </button>
+        </div>
+    </div>
+
+    <script src="js/common.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            WNU.initDetailPage();
+        });
+    </script>
+</body>
+</html>
