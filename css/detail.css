@@ -83,21 +83,12 @@
     text-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
-/* 主视觉下方的小缩略图行（规格图+视频） */
+/* 主视觉下方的小缩略图行（规格图+视频）- 换行排列 */
 .detail-thumbs-row {
     display: flex;
+    flex-wrap: wrap;
     gap: 8px;
-    overflow-x: auto;
     padding-bottom: 4px;
-    scrollbar-width: thin;
-}
-
-.detail-thumbs-row::-webkit-scrollbar {
-    height: 4px;
-}
-.detail-thumbs-row::-webkit-scrollbar-thumb {
-    background: #ddd;
-    border-radius: 2px;
 }
 
 .detail-thumb-item {
@@ -292,10 +283,10 @@
 
 .sku-picker-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(88px, 1fr));
-    gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(72px, 1fr));
+    gap: 8px;
     overflow: hidden;
-    max-height: 340px; /* 默认显示约 6 款 (88*3+10*2=284 留余量) */
+    max-height: 380px; /* 默认显示约 6 行 */
     transition: max-height 0.3s ease;
 }
 
@@ -675,4 +666,45 @@
     font-size: 12.5px;
     color: #92400e;
     line-height: 1.6;
+}
+
+/* ---------------- 移动端响应式优化 ---------------- */
+@media (max-width: 768px) {
+    /* 主图区域在移动端缩小 */
+    .detail-main-visual {
+        max-width: 320px;
+        margin: 0 auto;
+    }
+
+    /* 缩略图尺寸缩小 */
+    .detail-thumb-item {
+        width: 56px;
+        height: 56px;
+    }
+
+    /* 款式卡片在移动端更紧凑 */
+    .sku-picker-grid {
+        grid-template-columns: repeat(auto-fill, minmax(68px, 1fr));
+        gap: 6px;
+    }
+
+    .sku-card-name {
+        font-size: 11px;
+        padding: 4px 4px 6px;
+    }
+
+    /* 标题字号缩小 */
+    .detail-title {
+        font-size: 18px;
+    }
+
+    /* 价格字号调整 */
+    .detail-price-cur b {
+        font-size: 24px;
+    }
+
+    /* 底部栏适配 */
+    .bottom-bar-inner {
+        padding: 0 12px;
+    }
 }
