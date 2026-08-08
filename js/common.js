@@ -349,14 +349,17 @@
                     if (vObj) {
                         vImg.style.display = 'none';
                         vVideo.style.display = '';
-                        // B站 / 腾讯视频：给占位海报 + 点击遮罩跳转播放
-                        // 视频链接如果是第三方播放页，则不设置 src，而是点击后打开新页
-                        var directExt = /\.(mp4|webm|ogg)$/i.test(vObj.url || '');
-                        if (directExt) {
+                        // 本地视频：直接设置 src 并播放
+                        var isLocal = vObj.type === 'local' || /\.(mp4|webm|ogg)$/i.test(vObj.url || '');
+                        if (isLocal) {
                             vVideo.setAttribute('src', vObj.url);
-                            mask.style.display = '';
-                            vVideo.pause();
-                            vVideo.load();
+                            vVideo.playbackRate = 2.0; // 2倍速播放
+                            mask.style.display = 'none';
+                            vVideo.currentTime = 0;
+                            vVideo.play().catch(function () {
+                                // 自动播放被阻止时显示播放按钮
+                                mask.style.display = '';
+                            });
                         } else {
                             // 第三方视频：用封面当图，点跳转
                             vVideo.style.display = 'none';

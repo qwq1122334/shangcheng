@@ -24,22 +24,16 @@
 
     "videos": [
       {
-        "type": "bilibili",
-        "url": "https://www.bilibili.com/video/placeholder1",
+        "type": "local",
+        "url": "video/video1.mp4",
         "cover": "img/products/典雅绿.jpg",
-        "title": "面料实拍展示"
+        "title": "四件套面料介绍"
       },
       {
-        "type": "tencent",
-        "url": "https://v.qq.com/x/page/placeholder2.html",
+        "type": "local",
+        "url": "video/video2.mp4",
         "cover": "img/products/芬利来灰.jpg",
-        "title": "拆箱及细节展示"
-      },
-      {
-        "type": "bilibili",
-        "url": "https://www.bilibili.com/video/placeholder3",
-        "cover": "img/products/光的邂逅.jpg",
-        "title": "宿舍铺好效果实拍"
+        "title": "被褥介绍视频"
       }
     ],
 
