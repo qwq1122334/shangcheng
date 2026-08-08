@@ -535,19 +535,35 @@
             });
         }
 
-        // 立即预定按钮
+        // 立即预定按钮：滚动到付款区域
         var bookBtn = $('#bookNowBtn');
         if (bookBtn) {
             bookBtn.addEventListener('click', function () {
+                scrollToPaymentSection();
+            });
+        }
+
+        // 我已完成支付按钮：跳转到金数据表单
+        var paidDoneBtn = $('#paidDoneBtn');
+        if (paidDoneBtn) {
+            paidDoneBtn.addEventListener('click', function () {
                 handleBookNow(p);
             });
         }
     }
 
-    /* ---- 立即预定：直接跳转腾讯文档表单 ---- */
+    /* ---- 滚动到付款区域 ---- */
+    function scrollToPaymentSection() {
+        var section = document.getElementById('paymentSection');
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    }
+
+    /* ---- 立即预定：跳转到金数据表单 ---- */
     function handleBookNow(p) {
         if (!p.forms || !p.forms.orderForm) {
-            alert('老板暂未配置腾讯文档表单链接，请稍后再试。\n（配置方法：修改 data/products.json 中的 forms.orderForm 字段）');
+            alert('老板暂未配置金数据表单链接，请稍后再试。');
             return;
         }
         goToOrderForm(p.forms.orderForm);

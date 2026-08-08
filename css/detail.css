@@ -668,6 +668,42 @@
     line-height: 1.6;
 }
 
+.qrcode-tip {
+    text-align: center;
+    font-size: 12px;
+    color: #888;
+    margin-top: 8px;
+}
+
+.paid-done-btn {
+    display: block;
+    width: 100%;
+    margin-top: 16px;
+    padding: 14px 20px;
+    background: linear-gradient(135deg, #07c160 0%, #06a552 100%);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(7, 193, 96, 0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.paid-done-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(7, 193, 96, 0.4);
+}
+
+.paid-done-btn:active {
+    transform: translateY(0);
+}
+
+.paid-done-btn i {
+    margin-right: 8px;
+}
+
 /* ---------------- 移动端响应式优化 ---------------- */
 @media (max-width: 768px) {
     /* 主图区域在移动端缩小 */

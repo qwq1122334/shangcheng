@@ -156,39 +156,43 @@
             </section>
 
             <!-- 微信收款二维码提示 -->
-            <section class="detail-payment-info">
+            <section class="detail-payment-info" id="paymentSection">
                 <h2 class="block-title"><i class="fab fa-weixin"></i> 微信付款说明</h2>
                 <div class="payment-card">
                     <div class="payment-qrcode-box">
                         <img id="paymentQrcodeImg" src="img/payment/微信收款二维码.jpg" alt="微信收款二维码">
+                        <p class="qrcode-tip">长按保存或扫码付款</p>
                     </div>
                     <div class="payment-texts">
                         <p class="payment-tip-title">预定流程（请按顺序操作）</p>
                         <ol class="payment-steps">
                             <li>
                                 <b>①</b>
-                                <span>选好款式和数量，点击下方“立即预定”按钮</span>
+                                <span>选好款式和数量，点击下方"立即预定"按钮</span>
                             </li>
                             <li>
                                 <b>②</b>
-                                <span>页面将跳转金数据表单，请填写手机号 + 姓名 + 宿舍楼号 + 房间号</span>
+                                <span>微信扫描左侧二维码付款，备注您的手机号</span>
                             </li>
                             <li>
                                 <b>③</b>
-                                <span>微信扫描左侧二维码付款时，请在备注里填写您的手机号</span>
+                                <span>点击下方"我已完成支付"按钮，跳转金数据表单</span>
                             </li>
                             <li>
                                 <b>④</b>
-                                <span>在表单里上传付款截图，提交表单</span>
+                                <span>在表单里填写信息并上传付款截图，提交表单</span>
                             </li>
                             <li>
                                 <b>⑤</b>
-                                <span>老板会审核订单，点击顶部“我的订单”输入手机号可随时查询状态</span>
+                                <span>老板会审核订单，点击顶部"我的订单"输入手机号可随时查询状态</span>
                             </li>
                         </ol>
-                        <p class="payment-tip-sub" id="paymentTipSub">
+                        <p class="payment-tip-sub">
                             微信扫码付款时，请备注您的手机号，便于核对
                         </p>
+                        <button type="button" id="paidDoneBtn" class="paid-done-btn">
+                            <i class="fas fa-check-circle"></i> 我已完成支付，去填写表单
+                        </button>
                     </div>
                 </div>
             </section>
