@@ -38,15 +38,16 @@
     ],
 
     "params": {
-      "面料/填充物": "100%纯棉面料 + 羽丝棉填充（被芯2.5kg）",
-      "尺寸规格": "床单1.5m×2.0m / 被套200×230cm / 枕套48×74cm ×2",
-      "重量/克重": "整套约4.2kg，面料克重120g/㎡",
-      "洗涤/季节": "四季通用，可机洗，建议水温≤40℃，不可漂白"
+      "面料/填充物": "床单：纯棉 | 被套：羽丝棉 | 枕套：100%棉 | 被芯：100%棉外层+羽丝棉填充（5斤） | 枕芯：100%棉外套+羽丝棉填充 | 床垫：记忆棉填充",
+      "尺寸规格": "床单200×150cm | 被套200×150cm | 枕套74×48cm | 被芯200×150cm | 枕芯74×48cm | 床垫200×90cm×5cm",
+      "重量/克重": "被芯5斤",
+      "洗涤/季节": "30℃以下水温洗涤，严禁漂白剂，悬挂晾干不可拧干，不可滚筒烘干，低温熨烫≤110℃，可使用碳氢化合物溶剂干洗"
     },
 
     "contact": {
-      "wechat": "wn_bedding2026",
-      "phone": "13800000000"
+      "wechat": "wsyhou",
+      "phone": "15591008636",
+      "nickname": "猴学长"
     },
 
     "payment": {
@@ -115,6 +116,150 @@
         "images": [
           "img/products/时尚拼图.jpg"
         ]
+      },
+      {
+        "id": "sku008",
+        "name": "萌趣汪汪",
+        "cover": "img/products/萌趣汪汪.jpg",
+        "images": ["img/products/萌趣汪汪.jpg"]
+      },
+      {
+        "id": "sku009",
+        "name": "奶油起司（米）",
+        "cover": "img/products/奶油起司（米）.jpg",
+        "images": ["img/products/奶油起司（米）.jpg"]
+      },
+      {
+        "id": "sku010",
+        "name": "企鹅家族",
+        "cover": "img/products/企鹅家族.jpg",
+        "images": ["img/products/企鹅家族.jpg"]
+      },
+      {
+        "id": "sku011",
+        "name": "甜莓手记（粉）",
+        "cover": "img/products/甜莓手记（粉）.jpg",
+        "images": ["img/products/甜莓手记（粉）.jpg"]
+      },
+      {
+        "id": "sku012",
+        "name": "甜心幻彩（黄）",
+        "cover": "img/products/甜心幻彩（黄）.jpg",
+        "images": ["img/products/甜心幻彩（黄）.jpg"]
+      },
+      {
+        "id": "sku013",
+        "name": "派对泰迪",
+        "cover": "img/products/派对泰迪.jpg",
+        "images": ["img/products/派对泰迪.jpg"]
+      },
+      {
+        "id": "sku014",
+        "name": "童趣蜜歌",
+        "cover": "img/products/童趣蜜歌.jpg",
+        "images": ["img/products/童趣蜜歌.jpg"]
+      },
+      {
+        "id": "sku015",
+        "name": "瑞迪熊",
+        "cover": "img/products/瑞迪熊.jpg",
+        "images": ["img/products/瑞迪熊.jpg"]
+      },
+      {
+        "id": "sku016",
+        "name": "星辰蔷薇",
+        "cover": "img/products/星辰蔷薇.jpg",
+        "images": ["img/products/星辰蔷薇.jpg"]
+      },
+      {
+        "id": "sku017",
+        "name": "柯基小屋",
+        "cover": "img/products/柯基小屋.jpg",
+        "images": ["img/products/柯基小屋.jpg"]
+      },
+      {
+        "id": "sku018",
+        "name": "星花结",
+        "cover": "img/products/星花结.jpg",
+        "images": ["img/products/星花结.jpg"]
+      },
+      {
+        "id": "sku019",
+        "name": "小熊天文馆",
+        "cover": "img/products/小熊天文馆.jpg",
+        "images": ["img/products/小熊天文馆.jpg"]
+      },
+      {
+        "id": "sku020",
+        "name": "糖果幼儿园",
+        "cover": "img/products/糖果幼儿园.jpg",
+        "images": ["img/products/糖果幼儿园.jpg"]
+      },
+      {
+        "id": "sku021",
+        "name": "玉笛花间",
+        "cover": "img/products/玉笛花间.jpg",
+        "images": ["img/products/玉笛花间.jpg"]
+      },
+      {
+        "id": "sku022",
+        "name": "太空梦乐园",
+        "cover": "img/products/太空梦乐园.jpg",
+        "images": ["img/products/太空梦乐园.jpg"]
+      },
+      {
+        "id": "sku023",
+        "name": "竹林幼儿园",
+        "cover": "img/products/竹林幼儿园.jpg",
+        "images": ["img/products/竹林幼儿园.jpg"]
+      },
+      {
+        "id": "sku024",
+        "name": "星点漫语",
+        "cover": "img/products/星点漫语.jpg",
+        "images": ["img/products/星点漫语.jpg"]
+      },
+      {
+        "id": "sku025",
+        "name": "挽星河",
+        "cover": "img/products/挽星河.jpg",
+        "images": ["img/products/挽星河.jpg"]
+      },
+      {
+        "id": "sku026",
+        "name": "汪星部落",
+        "cover": "img/products/汪星部落.jpg",
+        "images": ["img/products/汪星部落.jpg"]
+      },
+      {
+        "id": "sku027",
+        "name": "甜梦小精灵",
+        "cover": "img/products/甜梦小精灵.jpg",
+        "images": ["img/products/甜梦小精灵.jpg"]
+      },
+      {
+        "id": "sku028",
+        "name": "柯基情书（蓝）",
+        "cover": "img/products/柯基情书（蓝）.jpg",
+        "images": ["img/products/柯基情书（蓝）.jpg"]
+      },
+      {
+        "id": "sku029",
+        "name": "花町小诗",
+        "cover": "img/products/花町小诗.jpg",
+        "images": ["img/products/花町小诗.jpg"]
+      },
+      {
+        "id": "sku030",
+        "name": "蜂蜜草莓（粉）",
+        "cover": "img/products/蜂蜜草莓（粉）.jpg",
+        "images": ["img/products/蜂蜜草莓（粉）.jpg"]
+      },
+      {
+        "id": "sku031",
+        "name": "柯基漫游记（米）",
+        "cover": "img/products/柯基漫游记（米）.jpg",
+        "images": ["img/products/柯基漫游记（米）.jpg"]
       }
     ]
   }

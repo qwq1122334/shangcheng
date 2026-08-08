@@ -67,6 +67,16 @@
         var hasAny = false;
         wrap.innerHTML = '';
 
+        if (contact && contact.nickname && String(contact.nickname).trim()) {
+            hasAny = true;
+            var nn = document.createElement('div');
+            nn.className = 'contact-chip nickname';
+            nn.innerHTML =
+                '<i class="fas fa-user"></i> 联系人：' +
+                '<span>' + String(contact.nickname).trim() + '</span>';
+            wrap.appendChild(nn);
+        }
+
         if (contact && contact.wechat && String(contact.wechat).trim()) {
             hasAny = true;
             var wc = document.createElement('div');
