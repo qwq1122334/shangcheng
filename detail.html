@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>新生被褥四件套 · 选款下单</title>
+    <title>新生被褥六件套 · 选款下单</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/detail.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -60,7 +60,7 @@
 
                 <!-- 右侧/下方：信息区 -->
                 <div class="detail-info">
-                    <h1 class="detail-title" id="detailTitle">渭南师范学院新生被褥四件套</h1>
+                    <h1 class="detail-title" id="detailTitle">渭南师范学院新生被褥六件套</h1>
                     <p class="detail-desc" id="detailDesc">厂家直供，100%纯棉面料，舒适透气</p>
 
                     <!-- 价格/已售/库存 -->
@@ -140,6 +140,15 @@
                         <div class="contact-items" id="contactItems">
                             <!-- JS 按 JSON 字段显示 -->
                         </div>
+                        <!-- 备用联系方式折叠栏 -->
+                        <div class="contact-collapse" id="contactBackupCollapse" style="display:none;">
+                            <div class="contact-collapse-toggle" id="contactBackupToggle">
+                                <i class="fas fa-chevron-right"></i> 展开备用联系方式
+                            </div>
+                            <div class="contact-collapse-body" id="contactBackupBody" style="display:none;">
+                                <!-- JS 渲染备用微信/手机 -->
+                            </div>
+                        </div>
                     </div>
 
                 </div>
@@ -193,6 +202,18 @@
                         <button type="button" id="paidDoneBtn" class="paid-done-btn">
                             <i class="fas fa-check-circle"></i> 我已完成支付，去填写表单
                         </button>
+                    </div>
+                </div>
+                <!-- 备用收款码折叠栏 -->
+                <div class="payment-collapse" id="paymentBackupCollapse" style="display:none;">
+                    <div class="payment-collapse-toggle" id="paymentBackupToggle">
+                        <i class="fas fa-chevron-right"></i> 展开备用收款码
+                    </div>
+                    <div class="payment-collapse-body" id="paymentBackupBody" style="display:none;">
+                        <div class="payment-qrcode-box backup-qr">
+                            <img id="paymentQrcodeBackupImg" src="" alt="备用收款码">
+                            <p class="qrcode-tip">备用微信收款码</p>
+                        </div>
                     </div>
                 </div>
             </section>

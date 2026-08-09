@@ -700,6 +700,57 @@
     transform: translateY(0);
 }
 
+/* ===== 备用信息折叠栏 ===== */
+.contact-collapse,
+.payment-collapse {
+    margin-top: 12px;
+    border-top: 1px dashed #e0e0e0;
+    padding-top: 10px;
+}
+
+.contact-collapse-toggle,
+.payment-collapse-toggle {
+    cursor: pointer;
+    color: #888;
+    font-size: 13px;
+    padding: 8px 0;
+    user-select: none;
+    transition: color 0.2s;
+}
+
+.contact-collapse-toggle:hover,
+.payment-collapse-toggle:hover {
+    color: #07c160;
+}
+
+.contact-collapse-toggle i,
+.payment-collapse-toggle i {
+    margin-right: 4px;
+    transition: transform 0.2s;
+}
+
+.contact-collapse-body,
+.payment-collapse-body {
+    margin-top: 10px;
+    animation: fadeInDown 0.3s ease;
+}
+
+.payment-collapse-body .backup-qr {
+    text-align: center;
+}
+
+.payment-collapse-body .backup-qr img {
+    max-width: 200px;
+    width: 60%;
+    border-radius: 10px;
+    border: 1px solid #eee;
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
 .paid-done-btn i {
     margin-right: 8px;
 }

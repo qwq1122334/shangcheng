@@ -107,6 +107,42 @@
         }
 
         if (hasAny) block.style.display = '';
+
+        /* 备用联系方式折叠栏 */
+        var backupCollapse = $('#contactBackupCollapse');
+        var backupBody = $('#contactBackupBody');
+        var backupToggle = $('#contactBackupToggle');
+        if (backupCollapse && backupBody && backupToggle) {
+            var hasBackup = false;
+            if (contact && contact.wechatBackup && String(contact.wechatBackup).trim()) {
+                hasBackup = true;
+                var wcb = document.createElement('div');
+                wcb.className = 'contact-chip wechat';
+                wcb.innerHTML = '<i class="fab fa-weixin"></i> 备用微信：<span>' + String(contact.wechatBackup).trim() + '</span>';
+                wcb.title = '点击复制微信号';
+                wcb.addEventListener('click', function () { copyText(String(contact.wechatBackup).trim(), wcb); });
+                backupBody.appendChild(wcb);
+            }
+            if (contact && contact.phoneBackup && String(contact.phoneBackup).trim()) {
+                hasBackup = true;
+                var phb = document.createElement('div');
+                phb.className = 'contact-chip phone';
+                phb.innerHTML = '<i class="fas fa-phone"></i> 备用电话：<span>' + String(contact.phoneBackup).trim() + '</span>';
+                phb.title = '点击拨打电话';
+                phb.addEventListener('click', function () { window.location.href = 'tel:' + String(contact.phoneBackup).trim(); });
+                backupBody.appendChild(phb);
+            }
+            if (hasBackup) {
+                backupCollapse.style.display = '';
+                backupToggle.addEventListener('click', function () {
+                    var isOpen = backupBody.style.display !== 'none';
+                    backupBody.style.display = isOpen ? 'none' : '';
+                    backupToggle.innerHTML = isOpen
+                        ? '<i class="fas fa-chevron-right"></i> 展开备用联系方式'
+                        : '<i class="fas fa-chevron-down"></i> 收起备用联系方式';
+                });
+            }
+        }
     }
 
     /* ---- 复制文本 ---- */
@@ -231,6 +267,23 @@
                 if (p.payment) {
                     if (p.payment.qrcode) setAttr('paymentQrcodeImg', 'src', p.payment.qrcode);
                     if (p.payment.tip) setText('paymentTipSub', p.payment.tip);
+
+                    /* 备用收款码折叠栏 */
+                    var payBackupCollapse = document.getElementById('paymentBackupCollapse');
+                    var payBackupBody = document.getElementById('paymentBackupBody');
+                    var payBackupToggle = document.getElementById('paymentBackupToggle');
+                    var payBackupImg = document.getElementById('paymentQrcodeBackupImg');
+                    if (p.payment.qrcodeBackup && payBackupCollapse && payBackupBody && payBackupToggle && payBackupImg) {
+                        payBackupImg.src = p.payment.qrcodeBackup;
+                        payBackupCollapse.style.display = '';
+                        payBackupToggle.addEventListener('click', function () {
+                            var isOpen = payBackupBody.style.display !== 'none';
+                            payBackupBody.style.display = isOpen ? 'none' : '';
+                            payBackupToggle.innerHTML = isOpen
+                                ? '<i class="fas fa-chevron-right"></i> 展开备用收款码'
+                                : '<i class="fas fa-chevron-down"></i> 收起备用收款码';
+                        });
+                    }
                 }
 
                 // 商品参数表

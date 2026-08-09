@@ -1,7 +1,7 @@
 {
   "product": {
-    "name": "渭南师范学院新生被褥四件套",
-    "shortName": "新生被褥四件套",
+    "name": "渭南师范学院新生被褥六件套",
+    "shortName": "新生被褥六件套",
     "description": "厂家直供，100%纯棉面料，舒适透气，专为2026级新生定制。8月30日统一进货，9月开学送至宿舍。",
 
     "pricing": {
@@ -27,7 +27,7 @@
         "type": "local",
         "url": "video/video1.mp4",
         "cover": "img/products/典雅绿.jpg",
-        "title": "四件套面料介绍"
+        "title": "六件套面料介绍"
       },
       {
         "type": "local",
@@ -47,11 +47,14 @@
     "contact": {
       "wechat": "wsyhou",
       "phone": "15591008636",
-      "nickname": "猴学长"
+      "nickname": "猴学长",
+      "wechatBackup": "wsyhoy2",
+      "phoneBackup": "15991372969"
     },
 
     "payment": {
       "qrcode": "img/payment/微信收款二维码.jpg",
+      "qrcodeBackup": "img/payment/备用收款码.jpg",
       "tip": "微信扫码付款时，请备注您的手机号，便于核对"
     },
 
